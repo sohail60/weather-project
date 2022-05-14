@@ -10,7 +10,7 @@ app.get("/",function(req,res){
     res.sendFile(__dirname+"/index.html");
 });
 
-    app.post("/",function(req,res){
+    app.post("/loc",function(req,res){
         const city=req.body.city;
         console.log(city);
         res.write(city);
@@ -26,11 +26,19 @@ app.get("/",function(req,res){
                 console.log(temp);
                 const desc=weatherData.weather[0].description;
                 const icon=weatherData.weather[0].icon;
-                const iconUrl="https://openweathermap.org/img/wn/"+ icon +"@2x.png";
-                // res.send("<h1>The temp in " + city + " is: " +temp+ "</h1>");
-                res.write("<h1>The temp in " + city + " is: " +temp+ "</h1>");
-                res.write("<p>The weather currently is: " +desc+ "</p>");
-                res.write("<img src=" + iconUrl+ ">");
+
+
+                // const iconUrl="https://openweathermap.org/img/wn/"+ icon +"@2x.png";
+                // res.write("<h1>The temp in " + city + " is: " +temp+ "</h1>");
+                // res.write("<p>The weather currently is: " +desc+ "</p>");
+                // res.write("<img src=" + iconUrl+ ">");
+
+                const iconUrl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+                res.setHeader("Content-Type", "text/html");
+                res.write("<h1>The temp in " + city + " is: " + temp + "</h1>", "utf8");
+                res.write("<p>The weather currently is: " + desc + "</p>", "utf8");
+                res.write("<img src=" + iconUrl + ">", "utf8");
+
             });
     });
     });
