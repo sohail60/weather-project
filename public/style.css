@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city-input{
+    padding: 5px 15px;
+}
+
+.btn{
+    padding: 5px 15px;
+    margin: 5px;
+    border: none;
+    background-color: rgb(38, 166, 234);
+    border-radius: 5px;
+    cursor: pointer;
+}
