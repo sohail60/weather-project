@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bmi.css">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <h1>Calculator for BMI</h1>
+
+    <!-- action="/bmicalculator" .This means that the form-data will be sent to /bmicalculator-->
+    <!-- method="post". We will not show the details in the url, so post method is used. If we would have used get method, then the details would have been visible in the url. -->
+    <form action="/bmicalculator" method="post" class="form">
+        <div class="numbers">
+            <!-- name field will be used to get the details of that input in the backend. -->
+            <input class="number-input" type="text" name="weight" placeholder="Enter your Weight in kg">
+            <input class="number-input" type="text" name="height" placeholder="Enter your Height in metre">
+        </div>
+            <input type="submit" name="Calculate BMI" class="btn">
+        </form>
+</body>
+</html>

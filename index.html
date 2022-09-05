@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator for Adding two numbers</h1>
+<!-- This page is not / page. This is /index.html -->
+<!-- action="/" .This means that the form-data will be sent to /-->
+<!-- method="post". We will not show the details in the url, so post method is used. If we would have used get method, then the details would have been visible in the url. -->
+    <form action="/" method="post" class="form">
+        <div class="numbers">
+            <!-- name field will be used to get the details of that input in the backend. -->
+            <input class="number-input" type="text" name="num1" placeholder="Enter 1st number">
+            <input class="number-input" type="text" name="num2" placeholder="Enter 2nd number">
+        </div>
+        <input type="submit" name="submit" class="btn">
+    </form>
+</body>
+</html>

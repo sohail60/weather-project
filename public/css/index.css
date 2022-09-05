@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.number-input{
+    padding: 5px;
+    margin: 2px;
+}
+
+.btn{
+    cursor: pointer;
+    margin: 15px;
+    padding: 10px 25px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #21a8f1;
+}
